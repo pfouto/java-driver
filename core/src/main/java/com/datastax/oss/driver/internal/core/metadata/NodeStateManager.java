@@ -115,6 +115,7 @@ public class NodeStateManager implements AsyncAutoCloseable {
       isInitialized = true;
     }
 
+    @SuppressWarnings("NonAtomicVolatileUpdate") // confined to the admin thread
     private void onChannelEvent(ChannelEvent event) {
       assert adminExecutor.inEventLoop();
       if (closeWasCalled) {
