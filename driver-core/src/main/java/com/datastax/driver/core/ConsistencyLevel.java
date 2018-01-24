@@ -29,7 +29,8 @@ public enum ConsistencyLevel {
     EACH_QUORUM(7),
     SERIAL(8),
     LOCAL_SERIAL(9),
-    LOCAL_ONE(10);
+    LOCAL_ONE(10),
+    ANY_QUORUM(11);
 
     // Used by the native protocol
     final int code;
