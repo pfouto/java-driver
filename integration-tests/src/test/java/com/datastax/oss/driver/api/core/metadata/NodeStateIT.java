@@ -590,7 +590,7 @@ public class NodeStateIT {
     try (ServerSocket ss = new ServerSocket(0)) {
       ss.setReuseAddress(true);
       return ss.getLocalPort();
-    }catch (IOException e) {
+    } catch (IOException e) {
       throw new AssertionError(e);
     }
   }
